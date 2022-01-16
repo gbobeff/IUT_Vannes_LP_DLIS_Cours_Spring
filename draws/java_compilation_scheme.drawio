@@ -1,0 +1,45 @@
+<mxfile host="app.diagrams.net" modified="2021-09-26T14:23:18.868Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36" etag="olcJatsj1Amsf2hGZyS3" version="15.3.3" type="github">
+  <diagram id="25LmZGdNUJQMmkM9VUiB" name="Page-1">
+    <mxGraphModel dx="1465" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="LhwM_iBuzBPEp8NMGF9g-11" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=open;startSize=14;endSize=14;sourcePerimeterSpacing=8;targetPerimeterSpacing=8;" edge="1" parent="1" source="LhwM_iBuzBPEp8NMGF9g-1" target="LhwM_iBuzBPEp8NMGF9g-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LhwM_iBuzBPEp8NMGF9g-1" value="MaClasse.class&lt;br&gt;(bytecode)" style="shape=card;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;fillColor=#e3c800;strokeColor=#B09500;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="440" y="160" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LhwM_iBuzBPEp8NMGF9g-9" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=0;entryDy=70;entryPerimeter=0;endArrow=open;startSize=14;endSize=14;sourcePerimeterSpacing=8;targetPerimeterSpacing=8;" edge="1" parent="1" source="LhwM_iBuzBPEp8NMGF9g-2" target="LhwM_iBuzBPEp8NMGF9g-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LhwM_iBuzBPEp8NMGF9g-2" value="javac.exe&lt;br&gt;(compilateur)" style="rounded=1;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="220" y="320" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="LhwM_iBuzBPEp8NMGF9g-8" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.447;entryY=-0.1;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=open;startSize=14;endSize=14;sourcePerimeterSpacing=8;targetPerimeterSpacing=8;" edge="1" parent="1" source="LhwM_iBuzBPEp8NMGF9g-3" target="LhwM_iBuzBPEp8NMGF9g-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LhwM_iBuzBPEp8NMGF9g-3" value="&lt;span&gt;MaClasse.java&lt;br&gt;(code source)&lt;br&gt;&lt;/span&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;hachureGap=4;pointerEvents=0;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="220" y="160" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LhwM_iBuzBPEp8NMGF9g-12" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=open;startSize=14;endSize=14;sourcePerimeterSpacing=8;targetPerimeterSpacing=8;" edge="1" parent="1" source="LhwM_iBuzBPEp8NMGF9g-6" target="LhwM_iBuzBPEp8NMGF9g-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LhwM_iBuzBPEp8NMGF9g-13" value="&lt;b&gt;JVM&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;(Java Virtuel Machine)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="640" y="320" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="LhwM_iBuzBPEp8NMGF9g-18" value="&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;div&gt;&lt;b&gt;JRE&lt;/b&gt; (Java Runtime Environment)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;fillColor=none;align=left;" vertex="1" parent="1">
+          <mxGeometry x="400" y="300" width="190" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LhwM_iBuzBPEp8NMGF9g-19" value="&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;div&gt;&lt;b&gt;JDK&lt;/b&gt; (Java Development Kit)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;fillColor=none;align=left;strokeColor=#0000FF;" vertex="1" parent="1">
+          <mxGeometry x="210" y="290" width="390" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="LhwM_iBuzBPEp8NMGF9g-6" value="java.exe&lt;br&gt;(interpréteur)" style="rounded=1;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="440" y="320" width="120" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

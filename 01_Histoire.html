@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>JAVA - Les Bases</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/league.css" id="theme">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h3>Framework Spring</h3>
+                <h4>... un peu d'histoire? ...</h4>
+                <p>
+                    <small>IUT de Vannes</small>
+                    <small>Licence Professionnelle Developpement de Logiciels Innovants et Securises (S2IMA)</small>
+                </p>
+                <p>
+                    <small>Gustavo BOBEFF - 2022</small>
+                </p>
+                <img src="img/logo_iut_vannes.png" width="10%" height="10%">
+            </section>
+            <section>
+                <h4>Introduction</h4>
+                <ul style="font-size: 20px;">
+                    <li>développé par Rod Johnson (2003)</li>
+                    <ul>
+                        <li>2002 publia son livre « Expert One-on-One J2EE Design and Development »</li>
+                        <li>Rod n’aimait pas la complexité et la difficulté à maintenir de EJB 2.0 et décida de développer un framework plus
+                            simple pour les applications web en J2EE. </li>
+                        <li>dans son livre, il présentait les bases et les principes de ce framework J2EE alternatif, et fournissait 30000
+                            lignes de code source pour l’accompagner. </li>
+                    </ul>
+                    <li>lightweight framework (cadriciel léger)</li>
+                    <ul>
+                        <li>Framework des frameworks (Struts, Hibernate, JSF, ...)</li>
+                    </ul>
+                    <li>une véritable plateforme pour développer</li>
+                    <li>et libre !!! (License Apache 2.0)</li>
+                </ul>
+            </section>
+            <section>
+                <h4>Chronologie</h4>
+                <ul style="font-size: 20px;">
+                    <li><span style="color: greenyellow">juin 2003</span>, la première version est apparue sous le nom version <span style="color: darkorange">0.9</span></li>
+                    <li>en <span style="color: greenyellow">mars 2004</span> sort la version officielle <span style="color: darkorange">1.0</span> de Spring</li>
+                    <ul>
+                        <li>le but? à l’époque était de rendre les architectures d’entreprise complexes plus faciles à tester et à maintenir</li>
+                        <li>se base sur les conventions JavaBeans pour ses modèles de composants</li>
+                        <li>depuis le début, Spring pouvait être utilisé sur tous les serveurs applicatifs ou conteneurs web classiques aussi bien que dans un environnement J2SE (c’est-à-dire sans
+                            conteneurs J2EE)</li>
+                    </ul>
+                    <li>en <span style="color: greenyellow">septembre 2004</span>, la version <span style="color: greenyedarkorangellow">1.1</span> est sortie avec des bugs corrigés et de nouvelles
+                        fonctions.
+                    </li>
+                    <li>la version <span style="color: darkorange">1.2</span>, sortie en <span style="color: greenyellow">mai 2005</span>, supportait déjà quelques fonctions de Java 5 tout en
+                        maintenant une rétrocompatibilité avec les versions de Java plus anciennes</li>
+                    <li><span style="color: greenyellow">en octobre 2006</span> sort la version <span style="color: darkorange">2.0</span> qui allait apporter beaucoup d’innovation</li>
+                    <ul>
+                        <li>à cette époque, le framework avait été téléchargé un million de fois et gagné deux récompenses : un Jax Innovation Award et un Jolt en 2006</li>
+                    </ul>
+                    <li>à ce jour, Spring a connu plusieurs développements et plusieurs ajouts, les plus importants ci-dessous : </li>
+                    <ul>
+                        <li><span style="color: greenyellow">2007</span> — Spring Framework <span style="color: darkorange">2.5</span> introduit les configurations avec annotation</li>
+                        <li><span style="color: greenyellow">2009</span> — Spring Framework <span style="color: darkorange">3.0</span> introduit les classes de configuration Java et requiert a minima
+                            Java 5</li>
+                        <ul>
+                            <li>achat de SpringSource par VMWare</li>
+                        </ul>
+                        <li><span style="color: greenyellow">2013</span> — Spring Framework <span style="color: darkorange">4.0</span> supporte complètement Java 8</li>
+                        <li><span style="color: greenyellow">2017</span> — Spring Framework <span style="color: darkorange">5.0</span> supporte Kotlin et les architectures réactives, et requiert a
+                            minima Java 8.</li>
+                    </ul>
+                </ul>
+            </section>
+            <section>
+                <h4>Le projet Spring Boot</h4>
+                <ul style="font-size: 20px;">
+                    <li>en octobre 2012, suite à la demande d'un client une extension a été introduite au Spring Framework</li>
+                    <ul>
+                        <li>demande de fonction qui nécessitait une architecture d'application Web sans conteneur</li>
+                    </ul>
+                    <li>cela conduisit au développement du projet Spring Boot au début de 2013 et finalement à la sortie de Spring Boot 1.0 en avril 2014.
+                    </li>
+                    <li>les problèmes qu’il traite sont :</li>
+                    <ul>
+                        <li>les applications Spring et Java comprennent un grand nombre de librairies (de tiers) techniques pour résoudre des problèmes comme la sécurité</li>
+                        <li>la sélection des librairies et, plus particulièrement, le choix des versions compatibles de celles-ci était à la charge des équipes de développement</li>
+                    </ul>
+                    <li>solution : </li>
+                    <ul>
+                        <li>fourniture d'un modèle BOM (Bill of Material) pour des projets uniques</li>
+                        <li>les équipes de développement accèdent à une liste mise à jour de dépendances en se basant sur les aspects techniques (web, batch, base de données) dans les versions
+                            compatibles et les mises à jour Spring Bot et puis poussent les mises à jour des librairies tierces</li>
+                    </ul>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/search/search.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+
+        // Also available as an ES module, see:
+        // https://revealjs.com/initialization/
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+        });
+
+    </script>
+
+</body>
+
+</html>

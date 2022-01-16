@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>JAVA - Les entrées/sorties</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/league.css" id="theme">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <div class="slides">
+            <section>
+                <h3>Framework Spring</h3>
+                <h4>... et si on commençait par le principe?</h4>
+                <p>
+                    <small>IUT de Vannes</small>
+                    <small>Licence Professionnelle Developpement de Logiciels Innovants et Securises (S2IMA)</small>
+                </p>
+                <p>
+                    <small>Gustavo BOBEFF - 2022</small>
+                </p>
+                <img src="img/logo_iut_vannes.png" width="10%" height="10%">
+            </section>
+            <section>
+                <h4>Structure de Spring Framework</h4>
+                <img src="img/spring_framework_structure.png" width="40%" height="40%">
+                <ul style="font-size: 20px;">
+                    <li><b style="color: crimson;">IoC Container : </b> C'est la base la plus importante et également la base, le fondement du Spring. C'est le rôle de la configuration et de la
+                        gestion du cycle de vie des objets Java.</li>
+                    <li><b style="color: crimson;">DAO, ORM, AOP, WEB : </b> Le module est disponible outil ou le cadre est intégré au Spring.</li>
+                </ul>
+            </section>
+            <section>
+                <h4>Inversion of Control (IoC)</h4>
+                <ul style="font-size: 20px;">
+                    <li><b style="color: crimson;">IoC</b> est une façon de concevoir l’architecture d’une application en se basant sur le mécanisme de <b style="color: crimson;">l’injection de
+                            dépendance</b>.</li>
+                    <li>liée étroitement au principe d’<b style="color: crimson;">inversion de dépendance</b> qui est un des cinq principes fondamentaux de la conception objet résumés par l’acronyme
+                        <b style="color: crimson;">SOLID</b> (Robert C. Martin).
+                    </li>
+                    <ul style="font-size: 18px;">
+                        <li><b style="color: greenyellow">S</b> : Responsabilité unique (<b style="color: crimson;">S</b>ingle responsibility principle) </li>
+                        <li><b style="color: greenyellow;">O</b> : Ouvert/fermé (<b style="color: crimson;">O</b>pen/closed principle)</li>
+                        <li><b style="color: greenyellow;">L</b> : Substitution de Liskov (<b style="color: crimson;">L</b>iskov substitution principle)</li>
+                        <li><b style="color: greenyellow;">I</b> : Ségrégation des interfaces (<b style="color: crimson;">I</b>nterface segregation principle)</li>
+                        <li><b style="color: greenyellow;">D</b> : Inversion des dépendances (<b style="color: crimson;">D</b>ependency inversion principle)</li>
+                    </ul><br>
+                    <li>L’injection de dépendance est un mécanisme simple à mettre en œuvre dans le cadre de la programmation objet et qui permet de diminuer le <b style="color: crimson;">couplage
+                            entre deux ou plusieurs objets</b>.</li>
+                    <li><b style="color: crimson;">principe d’Hollywood</b> : "... ne nous appelez pas, nous vous rappellerons ..."</li>
+                </ul>
+            </section>
+            <section>
+                <h4>Inversion of Control (IoC) - comment ça marche ?</h4>
+                <table>
+                    <tr>
+                        <td style="vertical-align: top;width: 50%;">
+                            <ul style="font-size: 20px;">
+                                <li>le conteneur IoC est le responsable de :</li>
+                                <ul style="font-size: 18px;">
+                                    <li>instancier les classes de l’application</li>
+                                    <li>configurer les objets</li>
+                                    <li>résoudre les dépendances entre les objets</li>
+                                </ul>
+                                <li>deux types de conteneur :</li>
+                                <ul style="font-size: 18px;">
+                                    <li>BeanFactory</li>
+                                    <li>ApplicationContext (préconisé)</li>
+                                </ul>
+                            </ul>
+                        </td>
+                        <td>
+                            <br>
+                            <img src="img/spring_ioc_architecture.png" width="50%" height="50%">
+                            <br>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section>
+                <h4>Inversion of Control (IoC) - metadata = "glue code"</h4>
+                <ul style="font-size: 20px;">
+                    <li>contient la : </li>
+                    <ul style="font-size: 18px;">
+                        <li>création des objets métier</li>
+                        <li>gestion du cycle de vie des objets métier</li>
+                        <li>définition des dépendances</li>
+                    </ul>
+                    <li>plusieurs supports possibles :</li>
+                    <ul style="font-size: 18px;">
+                        <li>fichier xml</li>
+                        <li>fichier java</li>
+                        <li>annotations du code</li>
+                    </ul>
+                </ul>
+            </section>
+            <section>
+                <section>
+                    <h2>Inversion of Control (IoC) - Exemples </h2>
+                </section>
+                <section>
+                    <h4>IoC - Exemples (prérequis)</h4>
+                    <ul style="font-size: 20px;">
+                        <li>IDE</li>
+                        <ul style="font-size: 18px;">
+                            <li><a href="https://www.jetbrains.com/fr-fr/idea/download/">IntelliJ IDEA</a></li>
+                            <li><a href="https://www.eclipse.org/downloads/">Eclipse Fundation</a></li>
+                        </ul>
+                        <li>Compte <a href="https://github.com/">GitHub</a></li>
+                        <li>Distribution <a href="https://repo.spring.io/ui/native/release/org/springframework/spring/">Spring Framework (5.3.9)</a></li>
+                        <li>Code source </li>
+                        <ul>
+                            <li>metadata xml :
+                                <a href="https://github.com/GISMAR-S-A-R-L/LP_DLIS_SpringFramework_Exemples">https://github.com/GISMAR-S-A-R-L/LP_DLIS_SpringFramework_Exemples</a>
+                            </li>
+                            <li>metadata xml (maven) : <a
+                                    href="https://github.com/GISMAR-S-A-R-L/LP_DLIS_SpringFramework_Exemple_Maven">https://github.com/GISMAR-S-A-R-L/LP_DLIS_SpringFramework_Exemple_Maven</a></li>
+                        </ul>
+                    </ul>
+                </section>
+                <section>
+                    <h4>IoC - Exemples : attributs de metadata (xml)</h4>
+                    <table style="font-size: 20px;">
+                        <caption>Elément <span style="font-family: 'Courier New', Courier; color:chartreuse">bean</span></caption>
+                        <tr>
+                            <th>Attribut</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Courier New', Courier, monospace; color:chartreuse">class</td>
+                            <td>Obligatoire. Classe à instancier.</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Courier New', Courier, monospace; color:chartreuse">name</td>
+                            <td>Identifiant de la définition du <span style="font-family: 'Courier New', Courier; color:chartreuse">bean</span>.</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Courier New', Courier, monospace; color:chartreuse">scope</td>
+                            <td>Le « scope » de l’objet crée par le <span style="font-family: 'Courier New', Courier; color:chartreuse">bean</span>.</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Courier New', Courier, monospace; color:chartreuse">constructor-arg</td>
+                            <td>Utilisé pour l’injection de dépendances.</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Courier New', Courier, monospace; color:chartreuse">properties</td>
+                            <td>Utilisé pour l’injection de dépendances.</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Courier New', Courier, monospace; color:chartreuse">autowire</td>
+                            <td>Utilisé pour l’injection de dépendances.</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Courier New', Courier, monospace; color:chartreuse">lazy-init</td>
+                            <td>Permet de déterminer le moment de la création de l’objet: à la mise en place de la configuration (lecture du fichier XML) ou la première utilisation.</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Courier New', Courier, monospace; color:chartreuse">init-method</td>
+                            <td>Méthode de l’objet appelée juste après l’affection des toutes les valeur des propriétés de l’objet.</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: 'Courier New', Courier, monospace; color:chartreuse">destroy-method</td>
+                            <td>Méthode appelée quand le container est « détruit ».</td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <h4>IoC - Exemples 01 (metadata xml)</h4>
+                    <ul style="font-size: 20px;">
+                        <li>Instanciation d'un objet simple (<span style="font-family: 'Courier New', Courier; color:chartreuse">bean</span>)</li>
+                        <li>Configuration (metadata) disponibles dans le fichier XML <span style="font-family: 'Courier New', Courier; color:chartreuse">application_context_01.xml</span></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>IoC - Exemples 02 (metadata xml)</h4>
+                    <ul style="font-size: 20px;">
+                        <li>Instanciation de deux objets (<span style="font-family: 'Courier New', Courier; color:chartreuse">bean</span>) avec composition (<span
+                                style="font-family: 'Courier New', Courier; color:chartreuse">ref</span>)
+                        </li>
+                        <li>Configuration (metadata) disponibles dans le fichier XML <span style="font-family: 'Courier New', Courier; color:chartreuse">application_context_02.xml</span></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>IoC - Exemples 03 (metadata xml)</h4>
+                    <ul style="font-size: 20px;">
+                        <li>Instanciation d'un objet simple (<span style="font-family: 'Courier New', Courier; color:chartreuse">bean</span>) par le constructeur.</li>
+                        <li>Configuration (metadata) disponibles dans le fichier XML <span style="font-family: 'Courier New', Courier; color:chartreuse">application_context_03.xml</span></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>IoC - Exemples 04 (metadata xml)</h4>
+                    <ul style="font-size: 20px;">
+                        <li>Instanciation d'un objet simple (<span style="font-family: 'Courier New', Courier; color:chartreuse">bean</span>) par le constructeur : </li>
+                        <ul>
+                            <li><span style="font-family: 'Courier New', Courier; color:chartreuse">scope=prototype</span> : les instances créées sont complètement indépendantes</li>
+                            <li><span style="font-family: 'Courier New', Courier; color:chartreuse">scope=singleton</span> : bien qu'appelé plusieurs fois une seule instance est finalement créée par
+                                le conteneur</li>
+                        </ul>
+                        <li>Configuration (metadata) disponibles dans le fichier XML <span style="font-family: 'Courier New', Courier; color:chartreuse">application_context_04.xml</span></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>IoC - Exemples 05 (metadata xml & annotations)</h4>
+                    <ul style="font-size: 20px;">
+                        <li>Instanciation des objets annotés (<span style="font-family: 'Courier New', Courier; color:chartreuse">@Component</span>) avec composition (<span
+                                style="font-family: 'Courier New', Courier; color:chartreuse">@Autowired</span>).</li>
+                        <li>Configuration (metadata) disponibles dans le fichier XML <span style="font-family: 'Courier New', Courier; color:chartreuse">application_context_05.xml</span></li>
+                        <li>Cette solution utilise, en plus des librairies des exemples précédents, la librairie <span
+                                style="font-family: 'Courier New', Courier; color:chartreuse">spring-aop-x.y.z.jar</span>.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>IoC - Exemples 06 (metadata xml & annotations)</h4>
+                    <ul style="font-size: 20px;">
+                        <li>Instanciation des objets annotés (<span style="font-family: 'Courier New', Courier; color:chartreuse">@Component</span>) avec composition (<span
+                                style="font-family: 'Courier New', Courier; color:chartreuse">@Autowired</span>).</li>
+                        <li>Configuration (metadata) disponibles dans le fichier .java <span style="font-family: 'Courier New', Courier; color:chartreuse">VoitureConfiguration.java</span> (<span
+                                style="font-family: 'Courier New', Courier; color:chartreuse">@Configuration</span>)</li>
+                        <ul>
+                            <li><span style="font-family: 'Courier New', Courier; color:chartreuse">@Configuration</span> indique que la classe peut être utilisée par le conteneur IoC entant que
+                                source de définition des <span style="font-family: 'Courier New', Courier; color:chartreuse">bean</span>.
+                            </li>
+                            <li>Une méthode annotée avec <span style="font-family: 'Courier New', Courier; color:chartreuse">@Bean</span> indique que l’objet retourné doit être enregistré en tant que
+                                bean dans le contexte de l’application.</li>
+                        </ul>
+                    </ul>
+                </section>
+                <section>
+                    <h4>IoC - Exemple Maven (metadata xml & annotations)</h4>
+                    <ul style="font-size: 20px;">
+                        <li>Instanciation des objets annotés (<span style="font-family: 'Courier New', Courier; color:chartreuse">@Component</span>) avec composition (<span
+                                style="font-family: 'Courier New', Courier; color:chartreuse">@Autowired</span>).</li>
+                        <li>Configuration (metadata) disponibles dans le fichier .java <span style="font-family: 'Courier New', Courier; color:chartreuse">VoitureConfiguration.java</span> (<span
+                                style="font-family: 'Courier New', Courier; color:chartreuse">@Configuration</span>)</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>IoC - Types de configuration (résumé)</h4>
+                    <ul style="font-size: 20px;">
+                        <li><span style="color: greenyellow">XML</span> : méthode « classique », très souple et très puissante</li>
+                        <ul>
+                            <li>Essentielle à connaître</li>
+                            <li>Convient très bien à la configuration dite « d’infrastructure »</li>
+                        </ul>
+                        <li><span style="color: greenyellow">Annotations</span> : depuis Spring 2.5</li>
+                        <ul>
+                            <li>Plus rapide à utiliser</li>
+                            <li>Plus simple : ne convient qu’à de la configuration « métier »</li>
+                        </ul>
+                        <li><span style="color: greenyellow">Java</span> : depuis Spring 3.0</li>
+                        <ul>
+                            <li>Permet de coder en Java quelque chose de similaire à la configuration XML</li>
+                            <li>Plus puissant (c’est du code, on peut faire ce qu’on veut)</li>
+                            <li>Moins simple à modifier, en particulier pour de la configuration « d’infrastructure »</li>
+                        </ul>
+                    </ul>
+                </section>
+                <section>
+                    <h4>IoC - Exercice 01 (classroom.github.com)</h4>
+                    <ul style="font-size: 20px;">
+                        <li><a href="https://classroom.github.com/a/ghEbrEhj">LP_DLIS_SpringFramework_IoC_Exercice_01 (https://classroom.github.com/a/ghEbrEhj)</a></li>
+                    </ul>
+                    <h4>IoC - Exercice 02 (classroom.github.com)</h4>
+                    <ul style="font-size: 20px;">
+                        <li><a href="https://classroom.github.com/a/rOkcPcLq">LP_DLIS_SpringFramework_IoC_Exercice_02 (https://classroom.github.com/a/rOkcPcLq)</a></li>
+                    </ul>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/search/search.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+
+        // Also available as an ES module, see:
+        // https://revealjs.com/initialization/
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+        });
+
+    </script>
+
+</body>
+
+</html>

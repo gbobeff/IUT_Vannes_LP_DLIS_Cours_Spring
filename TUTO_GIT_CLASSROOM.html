@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Tutoriel - Git Classroom</title>
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+
+	<link rel="stylesheet" href="dist/custom.css">
+
+	<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<div class="slides">
+			<section>
+				<h3>Tutoriel : GIT CLASSROOM</h3>
+				<p>
+					<small>Gustavo BOBEFF</small>
+				</p>
+				<p>
+					<small>2021 - 2022</small>
+				</p>
+				<div>
+					<img src="img/logo_cnam_na.png">
+				</div>
+				<div width="5%" height="5%">
+					<img src="img/under_construction.jpeg">
+				</div>
+			</section>
+			<section>
+				<section>
+					<h2>Initialiser le dépôt GIT</h2>
+					<ul style="font-size: 20px;">
+						<li>Lien : utiliser un browser pour acceder le lien classroom.github.com (ex.
+							https://classroom.github.com/a/ADrRq8a4)</li>
+						<img src="img/tuto_git_classroom/init_repot_login-git.png" width="40%" height="40%">
+						<li>S'authentifier sur <a href="https://github.com/login" target="_blank">https://github.com</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Accepter le sujet (TP)</h2>
+					<ul style="font-size: 20px;">
+						<li>Accepter le sujet</li>
+						<div class="row">
+							<div class="column">
+								<img src="img/tuto_git_classroom/init_repot_accept_assignment.png" style="width:100%">
+							</div>
+							<div class="column">
+								<img src="img/arrow_right.png" style="width:100%">
+							</div>
+							<div class="column">
+								<img src="img/tuto_git_classroom/init_repot_assignment_accepted.png" style="width:100%">
+							</div>
+						</div>
+					</ul>
+				</section>
+				<section>
+					<h2>Consulter le(s) répôt(s)</h2>
+					<ul style="font-size: 20px;">
+						<li>Afficher la liste de répôts</li>
+						<img src="img/tuto_git_classroom/check_creation_repot.png" width="40%" height="40%">
+					</ul>
+				</section>
+				<section>
+					<h4>Copie locale du répôt</h4>
+					<ul style="font-size: 20px;">
+						<li>Copier l'URL du dépôt</li>
+						<img src="img/tuto_git_classroom/select_repot_pour_checkout.png" width="20%" height="20%">
+						<li>Créer une copie locale (clone)</li>
+						<span style="font-size: 16px;">
+							<pre data-id="code-animation">
+								<code class="hljs" data-trim>
+									$ git clone https://github.com/GISMAR-S-A-R-L/tp0-language-java---concepts-de-base-gustavobobeff.git
+									Cloning into 'tp0-language-java---concepts-de-base-gustavobobeff'...
+									remote: Enumerating objects: 9, done.
+									remote: Counting objects: 100% (9/9), done.
+									remote: Compressing objects: 100% (6/6), done.
+									remote: Total 9 (delta 1), reused 3 (delta 0), pack-reused 0
+									Receiving objects: 100% (9/9), done.
+									Resolving deltas: 100% (1/1), done.
+									$ ll tp0-language-java---concepts-de-base-gustavobobeff
+									total 1
+									-rw-r--r-- 1 gismarsarl 197121 18 Nov 15 00:14 README.md
+								</code>
+							</pre>
+						</span>
+					</ul>
+				</section>
+			</section>
+		</div>
+	</div>
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/zoom/zoom.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/search/search.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+		});
+
+	</script>
+
+</body>
+
+</html>
