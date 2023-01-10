@@ -30,12 +30,12 @@
                     <small>Licence Professionnelle Developpement de Logiciels Innovants et Securises (S2IMA)</small>
                 </p>
                 <p>
-                    <small>Gustavo BOBEFF - 2022</small>
+                    <small>Gustavo BOBEFF - 2023</small>
                 </p>
                 <img src="img/logo_iut_vannes.png" width="10%" height="10%">
             </section>
             <section>
-                <h4>Structure de Spring Framework</h4>
+                <h4>Introduction</h4>
                 <ul style="font-size: 20px;">
                     <li>« Spring simplifié par Spring »</li>
                     <li>le développeur est concentré sur le code métier</li>
@@ -47,30 +47,171 @@
                             <li>convention over configuration (full)</li>
                         </ul>
                     </li>
-
+                    <li>Les caractéristiques de Spring Boot peuvent être résumées comme suit :
+                        <ul>
+                            <li>l’intégration directe d’applications de serveur Web/de conteneur comme Apache Tomcat ou Jetty sans utiliser de fichiers WAR (Web Application Archive)</li>
+                            <li>la configuration simplifiée de Maven grâce à des POM (Project Object Models) « Starter »</li>
+                            <li>lorsque c’est possible, la configuration automatique de Spring</li>
+                            <li>la mise à disposition de capacités non fonctionnelles telles que des outils de mesure ou des configurations délocalisées</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h4>Architecture</h4>
+                <ul style="font-size: 18px;">
+                    <li>Architecture
+                        <ul>
+                            <img src="img/archi-simplifie-spring_boot.png" width="70%" height="70%">
+                        </ul>
+                    </li>
+                    <li>Les composants clés dans une application Spring-Boot sont :
+                        <ul>
+                            <img src="img/SpringBootKeyComponents.png" width="50%" height="50%">
+                        </ul>
+                        <ul>
+                            <li><span style="color: greenyellow">Spring Boot Starters</span> : La principale responsabilité d’un starter est de regrouper un ensemble de dépendances communes dans un composant simple (par exemple spring-boot-starter-web pour embarques toutes les dépendances pour le développement d’une application web).</li>
+                            <li><span style="color: greenyellow">Spring Boot AutoConfigurator</span> : Permet de réduire drastiquement la configuration de base nécessaire dans une application (voir définition de l’annotation  @SpringBootApplication).</li>
+                            <li><span style="color: greenyellow">Spring Boot CLI</span> : Outil en ligne de commande qui facilite la création et exécution des applications Spring Boot.</li>
+                            <li><span style="color: greenyellow">Spring Boot Actuator</span> : Met en place la structure de base pour la génération des métriques sur l’application.</li>
+                        </ul>
+                    </li>
                 </ul>
             </section>
             <section>
                 <section>
                     <h4>Création d'une application Spring Boot</h4>
                     <ul style="font-size: 20px;">
-                        <li>Deux méthodes :
+                        <li>Trois méthodes :
                             <ul>
-                                <li>starter web <a href="https://start.spring.io/">https://start.spring.io/</a></li>
+                                <li>Spring Initilizr <a href="https://start.spring.io/" target="_blank">https://start.spring.io/</a></li>
+                                <li><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/cli.html" target="_blank">Spring Boot CLI</a></li>
                                 <li>wizard IDE</li>
+                                <li> ... ou à la main ? ;-)</li>
                             </ul>
                         </li>
                     </ul>
                 </section>
                 <section>
-                    <h4>Utilisation du starter WEB</h4>
+                    <h4>Création d'une application Spring Boot : Spring Initilizr</h4>
                     <ul style="font-size: 20px;">
-                        <li><a href="https://github.com/GISMAR-S-A-R-L/LP_DLIS_SpringBoot_Exemple_01">https://github.com/GISMAR-S-A-R-L/LP_DLIS_SpringBoot_Exemple_01</a></li>
+                        <li>Création d’un projet de base depuis <a href="https://start.spring.io/" target="_blank">https://start.spring.io/</a></li>
+                        <li>Import dans un IDE (IntelliJ)</li>
                     </ul>
                 </section>
                 <section>
-                    <h4>Utilisation du wizard IDE (IntelliJ)</h4>
+                    <h4>Création d'une application Spring Boot : Spring Boot CLI</h4>
+                    <ul style="font-size: 20px;">
+                        <li>Documentation du CLI <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/cli.html" target="_blank">ici</a>                    </li>
+                    </ul>
+                    <p style="font-size: 20px;">Quelques commandes ....</p>
+                    <span style="font-size: 20px;">
+                        <pre data-id="code-animation">
+                            <code class="language-shell hljs" data-trim>
+                            # Initialisation d'un projet : spring init
+                            # Aide :
+                            $ spring init --help
+
+                            # Liste d'options :
+                            $ spring init --list
+
+                            # Exemple d’initialisation
+                            $ spring init --build=maven --java-version=17 --dependencies=actuator --packaging=jar monAppExemple.zip
+                            </code>
+                        </pre>
+                    </span>		
                 </section>
+                <section>
+                    <h4>Création d'une application Spring Boot : IDE </h4>
+                    <ul style="font-size: 20px;">
+                        <li>IntelliJ</li>
+                    </ul>	
+                </section>
+                <section>
+                    <section>
+                        <h4>Exécuter une application Spring Boot</h4>
+                        <ul style="font-size: 20px;">
+                            <li>Ligne de commande JAVA</li>
+                            <span style="font-size: 20px;">
+                                <pre data-id="code-animation">
+                                    <code class="language-shell hljs" data-trim>
+                                    $ java -jar path/to/your/jarfile.jar fully.qualified.package.Application
+                                    </code>
+                                </pre>
+                            </span>	
+                            <li>Tâche Maven</li>
+                            <span style="font-size: 20px;">
+                                <pre data-id="code-animation">
+                                    <code class="language-shell hljs" data-trim>
+                                    $ mvn spring-boot:run
+                                    </code>
+                                </pre>
+                            </span>	
+                            <li>IDE (IntelliJ)</li>
+                            <img src="img/Spring-Boot_launch_config-IntelliJ.png" width="50%" height="50%">
+                        </ul>
+                    </section>
+                </section>
+            </section>
+            <section>
+                    <h4>Configuration standard</h4>
+                    <ul style="font-size: 20px;">
+                    <ul>
+                        <li>une application Spring Boot peut être configurée à travers </li>
+                        <ul>
+                            <li>le fichier application.properties (ou application.yml)</li>
+                            <li>programmatiquement</li>
+                            <li>par la ligne de commande</li>
+                        </ul>
+                        <li><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html">Common Application Properties</a></li>
+                    </ul>
+            </section>
+            <section>
+                    <h4>Gestion des profils</h4>
+                    <ul style="font-size: 20px;">
+                    <ul>
+                        <li>un profil permet de regrouper des beans, puis de les activer ou désactiver et de les configurer par ensembles </li>
+                        <li>par exemple, dans un profil test, on activera une datasource qui accède à une base de données embarquée alors qu’en profil prod, on accèdera à une base de données externe</li>
+                        <li>plusieurs profils peuvent être activés conjointenment</li>
+                        <li>Spring Boot utilise des fichiers de configuration, application.yml (ou properties)
+                            <ul>
+                                <li>Lorsqu’un profil est actif, Spring Boot charge un fichier application-{profile}.yml (ou properties).</li>
+                            </ul>
+                        </li>
+                        <li>Activation des profils
+                            <ul>
+                                <li>Ligne de commande JAVA</li>
+                                <span style="font-size: 20px;">
+                                    <pre data-id="code-animation">
+                                        <code class="language-shell hljs" data-trim>
+                                        $ java -Dspring.profiles.active=dev -jar app.jar
+                                        </code>
+                                    </pre>
+                                </span>
+                                <li>Tâche Maven</li>
+                                <span style="font-size: 20px;">
+                                    <pre data-id="code-animation">
+                                        <code class="language-shell hljs" data-trim>
+                                        $ mvn spring-boot:run -Dspring-boot.run.arguments="--spring.profiles.active=dev"
+                                        </code>
+                                    </pre>
+                                    <pre data-id="code-animation">
+                                        <code class="language-shell hljs" data-trim>
+                                        $ mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Dspring.profiles.active=dev"
+                                        </code>
+                                    </pre>
+                                </span>
+                                <li>IDE (IntelliJ)</li>
+                                <img src="img/Spring-Boot_launch_config-IntelliJ_profil.png" width="30%" height="30%">
+                            </ul>
+                        </li>
+                    </ul>
+            </section>
+            <section>
+                    <h4>Exemple 01 : Services REST</h4>
+                    <ul style="font-size: 20px;">
+                        <li><a href="https://github.com/GISMAR-S-A-R-L/LP_DLIS_SpringBoot_Exemple_01">https://github.com/GISMAR-S-A-R-L/LP_DLIS_SpringBoot_Exemple_01</a></li>
+                    </ul>
             </section>
         </div>
     </div>
