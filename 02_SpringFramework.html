@@ -40,34 +40,34 @@
                 <h4>Structure du Spring Framework</h4>
                 <img src="img/spring_framework_structure.png" width="40%" height="40%">
                 <ul style="font-size: 18px;">
-                    <li><b style="color: crimson;">Core Container : </b> ensemble de modules de base qui constitue la partie fondamentale du framework, notamment l’implémentation pour mettre en place l’inversion de contrôle (IoC - Inversion of Control) et l’injection de dépendances (Dependency Injection) parmi d’autres. </li>
-                    <li><b style="color: crimson;">AOP : </b>fournie les fonctionnalités basées sur les spécifications AOP (Aspect-Oriented Programming).</li>
-                    <li><b style="color: crimson;">Aspects : </b>intégration avec AspectJ (Extension AO pour Java).</li>
-                    <li><b style="color: crimson;">Instrumentation : </b>fonctionnalités permettant de manipuler des byte-codes des classes Java compilées.</li>
-                    <li><b style="color: crimson;">Messaging : </b>fournie les fonctionnalités permettant l’implémentation des applications basées sur l’envoi de messages.</li>
-                    <li><b style="color: crimson;">Data Access/Integration : </b>modules pour la gestion transactionnelle de données.</li>
-                    <li><b style="color: crimson;">Web : </b>ensemble de modules pour l’implémentation des applications Web.</li>
-                    <li><b style="color: crimson;">Test : </b>modules pour la mise en place de tests unitaires et d’intégration des applications s’appuyant sur Spring.</li>
+                    <li><b style="color: rgb(20, 220, 27);">Core Container : </b> ensemble de modules de base qui constitue la partie fondamentale du framework, notamment l’implémentation pour mettre en place l’inversion de contrôle (IoC - Inversion of Control) et l’injection de dépendances (Dependency Injection) parmi d’autres. </li>
+                    <li><b style="color: rgb(20, 220, 27);">AOP : </b>fournie les fonctionnalités basées sur les spécifications AOP (Aspect-Oriented Programming).</li>
+                    <li><b style="color: rgb(20, 220, 27);">Aspects : </b>intégration avec AspectJ (Extension AO pour Java).</li>
+                    <li><b style="color: rgb(20, 220, 27);">Instrumentation : </b>fonctionnalités permettant de manipuler des byte-codes des classes Java compilées.</li>
+                    <li><b style="color: rgb(20, 220, 27);">Messaging : </b>fournie les fonctionnalités permettant l’implémentation des applications basées sur l’envoi de messages.</li>
+                    <li><b style="color: rgb(20, 220, 27);">Data Access/Integration : </b>modules pour la gestion transactionnelle de données.</li>
+                    <li><b style="color: rgb(20, 220, 27);">Web : </b>ensemble de modules pour l’implémentation des applications Web.</li>
+                    <li><b style="color: rgb(20, 220, 27);">Test : </b>modules pour la mise en place de tests unitaires et d’intégration des applications s’appuyant sur Spring.</li>
                 </ul>
             </section>
             <section>
                 <h4>Inversion of Control (IoC)</h4>
                 <ul style="font-size: 20px;">
-                    <li><b style="color: crimson;">IoC</b> est une façon de concevoir l’architecture d’une application en se basant sur le mécanisme de <b style="color: crimson;">l’injection de
+                    <li><b style="color: rgb(20, 220, 27);">IoC</b> est une façon de concevoir l’architecture d’une application en se basant sur le mécanisme de <b style="color: rgb(20, 220, 27);">l’injection de
                             dépendance</b>.</li>
-                    <li>liée étroitement au principe d’<b style="color: crimson;">inversion de dépendance</b> qui est un des cinq principes fondamentaux de la conception objet résumés par l’acronyme
-                        <b style="color: crimson;">SOLID</b> (Robert C. Martin).
+                    <li>liée étroitement au principe d’<b style="color: rgb(20, 220, 27);">inversion de dépendance</b> qui est un des cinq principes fondamentaux de la conception objet résumés par l’acronyme
+                        <b style="color: rgb(20, 220, 27);">SOLID</b> (Robert C. Martin).
                     </li>
                     <ul style="font-size: 18px;">
-                        <li><b style="color: greenyellow">S</b> : Responsabilité unique (<b style="color: crimson;">S</b>ingle responsibility principle) </li>
-                        <li><b style="color: greenyellow;">O</b> : Ouvert/fermé (<b style="color: crimson;">O</b>pen/closed principle)</li>
-                        <li><b style="color: greenyellow;">L</b> : Substitution de Liskov (<b style="color: crimson;">L</b>iskov substitution principle)</li>
-                        <li><b style="color: greenyellow;">I</b> : Ségrégation des interfaces (<b style="color: crimson;">I</b>nterface segregation principle)</li>
-                        <li><b style="color: greenyellow;">D</b> : Inversion des dépendances (<b style="color: crimson;">D</b>ependency inversion principle)</li>
+                        <li><b style="color: greenyellow">S</b> : Responsabilité unique (<b style="color: rgb(20, 220, 27);">S</b>ingle responsibility principle) </li>
+                        <li><b style="color: greenyellow;">O</b> : Ouvert/fermé (<b style="color: rgb(20, 220, 27);">O</b>pen/closed principle)</li>
+                        <li><b style="color: greenyellow;">L</b> : Substitution de Liskov (<b style="color: rgb(20, 220, 27);">L</b>iskov substitution principle)</li>
+                        <li><b style="color: greenyellow;">I</b> : Ségrégation des interfaces (<b style="color: rgb(20, 220, 27);">I</b>nterface segregation principle)</li>
+                        <li><b style="color: greenyellow;">D</b> : Inversion des dépendances (<b style="color: rgb(20, 220, 27);">D</b>ependency inversion principle)</li>
                     </ul><br>
-                    <li>L’injection de dépendance est un mécanisme simple à mettre en œuvre dans le cadre de la programmation objet et qui permet de diminuer le <b style="color: crimson;">couplage
+                    <li>L’injection de dépendance est un mécanisme simple à mettre en œuvre dans le cadre de la programmation objet et qui permet de diminuer le <b style="color: rgb(20, 220, 27);">couplage
                             entre deux ou plusieurs objets</b>.</li>
-                    <li><b style="color: crimson;">principe d’Hollywood</b> : "... ne nous appelez pas, nous vous rappellerons ..."</li>
+                    <li><b style="color: rgb(20, 220, 27);">principe d’Hollywood</b> : "... ne nous appelez pas, nous vous rappellerons ..."</li>
                 </ul>
             </section>
             <section>
